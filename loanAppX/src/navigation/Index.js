@@ -1,32 +1,15 @@
-import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import { Icon } from 'react-native-vector-icons/Ionicons';
-import HomeScreen from '../screens/HomeScreen';
-
-const Tab = createBottomTabNavigator();
-const Drawer = createDrawerNavigator();
-
-export default function Index() {
-  return (
-    <NavigationContainer>
-      <MainStackNavigator />
-    </NavigationContainer>
-  );
-}
-
-
+//  ./App.js
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
+import BottomTabNavigator from "./TabNavigator";
+import DrawerNavigator from "./navigation/DrawerNavigator";
 
-import { MainStackNavigator } from "./navigation/StackNavigator";
-
- const App = () => {
+ const Index = () => {
   return (
     <NavigationContainer>
-      <MainStackNavigator />
+      <BottomTabNavigator/>
+      
     </NavigationContainer>
   );
 }
-export default App
+export default Index
