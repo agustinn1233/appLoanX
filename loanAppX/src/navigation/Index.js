@@ -1,15 +1,13 @@
-//  ./App.js
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import BottomTabNavigator from "./TabNavigator";
-import DrawerNavigator from "./navigation/DrawerNavigator";
+import DrawerNavigator from "../navigation/DrawerNavigator";
 
  const Index = () => {
   return (
     <NavigationContainer>
-      <BottomTabNavigator/>
-      
+      <DrawerNavigator />
     </NavigationContainer>
   );
 }
-export default Index
+
+export default Index;

@@ -1,8 +1,8 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-
-import Home from "../screens/HomeScreen";
-import Product from "../screens/ProductScreen";
+import Home from "../screens/Home";
+import About from "../screens/About";
+import Contact from "../screens/Contact";
 
 const Stack = createStackNavigator();
 
@@ -18,7 +18,7 @@ const MainStackNavigator = () => {
   return (
     <Stack.Navigator screenOptions={screenOptionStyle}>
       <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="About" component={Product} />
+      <Stack.Screen name="About" component={About} />
     </Stack.Navigator>
   );
 }
@@ -26,7 +26,7 @@ const MainStackNavigator = () => {
 const ContactStackNavigator = () => {
   return (
     <Stack.Navigator screenOptions={screenOptionStyle}>
-      <Stack.Screen name="Contact" component={Product} />
+      <Stack.Screen name="Contact" component={Contact} />
     </Stack.Navigator>
   );
 }
