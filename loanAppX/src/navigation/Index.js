@@ -1,13 +1,11 @@
-import React from "react";
+import * as React from 'react';
 import { NavigationContainer } from "@react-navigation/native";
-import DrawerNavigator from "../navigation/DrawerNavigator";
+import { HomeStackNavigator } from "../navigation/StackNavigator";
 
- const Index = () => {
+export default function Index() {
   return (
     <NavigationContainer>
-      <DrawerNavigator />
+      <HomeStackNavigator />
     </NavigationContainer>
   );
 }
-
-export default Index;

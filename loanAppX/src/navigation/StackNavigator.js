@@ -1,8 +1,9 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import Home from "../screens/Home";
-import About from "../screens/About";
-import Contact from "../screens/Contact";
+import Profile from "../screens/Profile";
+import Details from "../screens/Details";
+import Loans from "../screens/Loans";
 
 const Stack = createStackNavigator();
 
@@ -14,21 +15,36 @@ const screenOptionStyle = {
   headerBackTitle: "Back",
 };
 
-const MainStackNavigator = () => {
+const HomeStackNavigator = () => {
   return (
     <Stack.Navigator screenOptions={screenOptionStyle}>
       <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="About" component={About} />
     </Stack.Navigator>
   );
 }
 
-const ContactStackNavigator = () => {
+const DetailsStackNavigator = () => {
   return (
     <Stack.Navigator screenOptions={screenOptionStyle}>
-      <Stack.Screen name="Contact" component={Contact} />
+      <Stack.Screen name="Details" component={Details} />
     </Stack.Navigator>
   );
 }
 
-export { MainStackNavigator, ContactStackNavigator };
+const LoansStackNavigator = () => {
+  return (
+    <Stack.Navigator screenOptions={screenOptionStyle}>
+      <Stack.Screen name="Loans" component={Loans} />
+    </Stack.Navigator>
+  );
+}
+
+const ProfileStackNavigator = () => {
+  return (
+    <Stack.Navigator screenOptions={screenOptionStyle}>
+      <Stack.Screen name="Profile" component={Profile} />
+    </Stack.Navigator>
+  );
+}
+
+export { HomeStackNavigator, DetailsStackNavigator, LoansStackNavigator, ProfileStackNavigator };
